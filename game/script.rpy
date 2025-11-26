@@ -3,20 +3,34 @@
 # 强制初始化持久化数据（使用default确保编译时定义）
 default persistent.achievements = {}
 
-# 图片和音频资源定义
 init:
     # 位置变换
+    transform trueleft:
+        xalign 0.0
+    transform leftish:
+        xalign 0.1
     transform left:
         xalign 0.2
-    transform right:
-        xalign 0.8
-    transform center:
-        xalign 0.5
     transform slight_left:
         xalign 0.3
+    transform center:
+        xalign 0.5
     transform slight_right:
         xalign 0.7
-    
+    transform right:
+        xalign 0.8
+    transform rightish:
+        xalign 0.9
+    transform trueright:
+        xalign 1.0
+    transform farleft:
+        xalign -0.15
+    transform farright:
+        xalign 1.15
+    transform maxleft:
+        xalign -0.5
+    transform maxright:
+        xalign 1.5
     # 背景图片
     image bg black = "#000"
     image bg white = "#fff"
@@ -35,9 +49,23 @@ init:
     image bg monika_room = "images/bg_monika_room.jpg"
 
     # 角色立绘 - 自动生成所有使用的图片定义
+    image o_mean = "images/o_mean.png"
+    image bg bbq = "images/bg_bbq.png"
+    image o_normal = "images/o_normal.png"
+    image s_understanding = "images/s_understanding.png"
+    image c_happy = "images/c_happy.png"
+    image o_surprise = "images/o_surprise.png"
+    image s_joke = "images/s_joke.png"
+    image bg_classroom = "images/bg_classroom.png"
     image s_bbq = "images/s_bbq.png"
+    image s_hug = "images/s_hug.png"
+    image o_cute = "images/o_cute.png"
+    image s_happy = "images/s_happy.png"
+    image c_normal = "images/c_normal.png"
+    image bg classroom = "images/bg_classroom.png"
+    image bg_dormnight = "images/bg_dormnight.png"
+    image bg_dormday = "images/bg_dormday.png"
     image s_normal = "images/s_normal.png"
-    image bbq = "images/bbq.png"
 
     # 音乐和音效
     define audio.main_theme = "audio/main_theme.ogg"
@@ -63,27 +91,27 @@ define leo = Character("Leo", color="#ff6666")
 define stranger = Character("陌生人", color="#aaaaaa")
 define waiter = Character("服务员", color="#aaaaaa")
 define shane = Character("Shane", color="#aaddff")
-define nnxnIk3 = Character("Nnxnik3")
-define 微信里的me = Character("微信里的me")
-define 回忆中的sayori = Character("回忆中的sayori")
-define staff = Character("Staff")
-define dorm_staff = Character("Dorm Staff")
-define everyone = Character("Everyone")
-define telephone = Character("Telephone")
-define mxnlke = Character("Mxnlke")
-define 门的对面 = Character("门的对面")
-define DDOS = Character("Ddos")
-define mxnika = Character("Mxnika")
-define 微信里的shane = Character("微信里的shane")
-define DDLC = Character("Ddlc")
-define 尚睿洋 = Character("尚睿洋")
-define 微信里的sayori = Character("微信里的sayori")
-define moment = Character("Moment")
-define everyone_else = Character("Everyone Else")
 define monika、sayori、cordelia、obedience、我、shane、teacher = Character("Monika、sayori、cordelia、obedience、我、shane、teacher")
+define mxnlke = Character("Mxnlke")
+define moment = Character("Moment")
+define 回忆中的sayori = Character("回忆中的sayori")
+define 微信里的me = Character("微信里的me")
 define paper = Character("Paper")
 define voice = Character("Voice")
+define 门的对面 = Character("门的对面")
+define DDOS = Character("Ddos")
+define everyone = Character("Everyone")
 define obedience_and_cordelia = Character("Obedience And Cordelia")
+define 微信里的shane = Character("微信里的shane")
+define telephone = Character("Telephone")
+define staff = Character("Staff")
+define dorm_staff = Character("Dorm Staff")
+define 尚睿洋 = Character("尚睿洋")
+define DDLC = Character("Ddlc")
+define 微信里的sayori = Character("微信里的sayori")
+define everyone_else = Character("Everyone Else")
+define nnxnIk3 = Character("Nnxnik3")
+define mxnika = Character("Mxnika")
 
 # 成就系统函数
 init python:
@@ -121,19 +149,19 @@ init python:
                 return False
         return True
 
-define 吐出了东西的sayori = Character("吐出了东西的sayori")
-define cordelia_and_obedience = Character("Cordelia And Obedience")
-define log = Character("Log")
-define clerk = Character("Clerk")
 define 微信里的助教 = Character("微信里的助教")
-define 嘴里堵着东西且被捆起来的sayori = Character("嘴里堵着东西且被捆起来的sayori")
+define log = Character("Log")
 define S_mind = Character("S Mind")
-define mom = Character("Mom")
+define cordelia_and_obedience = Character("Cordelia And Obedience")
+define everyone_else = Character("Everyone Else")
+define C_mind = Character("C Mind")
+define evryone_except_monika_and_sayori = Character("Evryone Except Monika And Sayori")
+define 吐出了东西的sayori = Character("吐出了东西的sayori")
 define cordelia的舍友 = Character("Cordelia的舍友")
 define 记忆里的me = Character("记忆里的me")
-define C_mind = Character("C Mind")
-define everyone_else = Character("Everyone Else")
-define evryone_except_monika_and_sayori = Character("Evryone Except Monika And Sayori")
+define 嘴里堵着东西且被捆起来的sayori = Character("嘴里堵着东西且被捆起来的sayori")
+define mom = Character("Mom")
+define clerk = Character("Clerk")
 
 # Monika线专用变量
 default monika_count = 0
@@ -147,7 +175,7 @@ label start:
 
 label chapter1:
     $ in_sayori_route = False
-    show bbq with dissolve
+    scene bg bbq with dissolve
     mind "经过了人生中最漫长的暑假和军训,我的大学生活就这样拉开了序幕。"
     mind "难以想象啊,不久前的我还在想高考和朋友去向的事情,现在感觉已经好遥远好遥远……"
     mind "朋友们也在遥远的地方呢……"
@@ -159,83 +187,123 @@ label chapter1:
     mind "…………"
     sayori "Ohayou！！！（日语里的“早上好”）"
     me "啊啊啊啊啊？！"
-    show s_normal at left with dissolve
+    show s_normal at left
+    play music quiet fadein 2.0
     me "呼,是你呀,sayori。吓我一大跳。我差点忘了你也来脚大了。"
     mind "坐在烧烤摊门外的椅子上胡思乱想,突然被萌萌的sayori跳脸了,差点心脏骤停……"
     mind "不过,sayori总是喜欢突然蹦出来吓人……自从我认识她,她就是这个性子。我啥时候认识她的……那应该是我们很小很小的时候？"
+    hide s_normal
+    show s_happy at center
     sayori "呐呐,又开始发呆了？"
     me "诶诶？"
     mind "怎么突然拉着我就走啊,我还没emo完呢……"
     sayori "班会要开始了,快走快走……你去扫辆车吧,我马上跟上。"
-    hide s_normal with dissolve
+    hide s_happy
     mind "虽然说好像是这样,但总感觉她不是因为这个拉我……"
     mind "悄悄回头看看……啊,果然如此……"
-    show s_bbq at right with dissolve
+    show s_bbq at right
     sayori "诶嘿……啊呜啊呜,被发现了吗~"
     # 动作: 手拿烤串
     me "太明显了……而且多少年都是这样吧,你突然作妖绝对是因为吃的。"
     sayori "嘿嘿……早就在意料之中了喵？不过确实很好吃。"
     me "重点不是味道啊喂！我的emo时间就这样被打断了,这个才是重点吧！"
+    hide s_bbq
+    show s_joke at center
     sayori "不要不开心啦,我不就是因为这个才过来的吗？"
     sayori "一个人吃烧烤真的好~惨~啊~呜呜呜,且让你的超绝可爱青梅替你分担一些吧~"
     me "再不去班会就真要迟到了啊！！"
-    mind "结果是：我们吃完了剩下的烤串,但是班会课迟到了。所有人都坐好了。"
+    hide s_joke
+    mind "结果是：sayori吃完了剩下的烤串,但是班会课迟到了……"
     jump chapter2
 label chapter2:
     $ in_sayori_route = False
+    scene bg classroom with dissolve
     teacher "好的,人终于齐了！大家来做自我介绍吧！我们班人比较多,所以大家简单介绍下自己的爱好就行了……"
     mind "这么突然？我还没准备好呢！"
     mind "一个长头发的漂亮女生走上讲台,步子走得很沉稳,看来受过良好的教育。"
+    show c_normal
     cordelia "大家好,我是cordelia。我的爱好只有数学和钢琴,不过平时我是个循规蹈矩的人,可能有点无聊……学习搭子和音乐发烧友可以找我。嗯,就这样。"
+    hide c_normal
     mind "怎么会有人把数学当爱好啊……脚大全是卷狗吧。"
+    show o_normal
     obedience "我叫obedience,我的爱好很多……我喜欢写散文、烘焙、游泳、摄影和吹葫芦丝,我还喜欢玩原神和看帅哥……欢迎大家来找我玩！"
+    hide o_normal
+    show s_joke at left
     sayori "到我啦,让我过一下。"
     me "哦,好的……"
+    hide s_joke
+    show s_hug
     sayori "Ohayou！！（日语里的“早上好”）"
     # 动作: 走上讲台
     me "我就知道……"
     # 动作: 扶额
     sayori "我是sayori,我喜欢写诗。大家可以来找我哦,我超喜欢交朋友的！有什么不开心的也可以跟我说,我一定会让大家开心起来的~"
+    hide s_hug
     mind "她的确能……也许我应该多和sayori一起玩。……好像漏听了好几个人,不管了,该到我了吧？"
     teacher "下课了,还有没做自我介绍的吗？啊……好的,没有了,下课吧！"
     me "诶诶,老师,这里……"
     me "被无视了……大家都走了吗。"
     me "教室里好吵啊……"
+    show s_understanding
     sayori "老师能有什么坏心思呢,老师只是急着下班罢了。"
     # 动作: 拍肩
     mind "……世界平静了。"
     me "……谢谢你,sayori。"
     sayori "呆jio不~（日语里的“没关系”）明天见啦！"
     me "……嗯,我也回去吧。"
+    hide s_understanding
+    show bg_dormnight
     mind "军训期间看起来非常摆的舍友似乎都开始内卷了,参加了一大堆比赛,可我还什么都不会呢……大家都在熬夜学习呢……"
     mind "我好像又开始emo了。这是不是我高考考到这的原因呢……"
     mind "但凡再高一点点,也不至于来这里了……这个学院老是被群嘲,可是学院里的人还这么卷,那我怎么办……"
     jump chapter3
 label chapter3:
     $ in_sayori_route = False
+    show bg_dormday
     mind "…………"
     mind "啊,醒了。数学早十！快跑快跑。"
+    show bg_classroom
+    show c_happy at farleft
+    show s_happy at center
     me "早上好,sayori！有座位吗？"
-    sayori "这里这里！我旁边坐了cordelia,你可以坐我后面,在obedience旁边。"
+    sayori "这里这里！cordelia坐我旁边啦,你坐我后面吧？在obedience旁边。"
     me "这么快就认识新朋友了啊？大家好大家好……"
+    show o_cute at farright
     obedience "哈喽哈喽！我叫obedience,很高兴认识你……"
     teacher "Silence, please! I'm Professor Cai, and welcome you all to the maths' world!"
+    hide c_happy
+    hide s_happy
+    hide o_cute
     mind "为什么中国人要讲英语啊……课本身难度倒是还好。真是漫长的一节课。"
+    show s_understanding
     sayori "终于下课了……大家听得怎么样？"
+    show o_normal at farright
     obedience "好难啊！他说了好多我听不懂的东西,好多新名词,感觉没上过这么难懂的数学课。比我高中那个老师帅倒是真的,那个老师……"
+    hide o_normal
+    show c_normal at farleft
     cordelia "嗯……其实还好吧。"
+    show o_surprise at farright
     obedience "诶？？可是他一开始讲的那一串东西我就没听懂,比如说……"
     cordelia "他不就是简单介绍了一下背景知识吗？“现代数学的基础是类型论、集合论、范畴论……”大概就是这些吧。"
     obedience "嗯……"
+    hide o_surprise
+    hide c_normal
+    hide s_understanding
     me "讲得这么简单,我们怎么跟电院的比啊……"
     $ grant_achievement("脚大2")
     # 成就: 脚大2
+    show s_happy
     sayori "别这么想,我们以后也有比他们难的课吧。"
+    show o_mean at farright
     obedience "嘿嘿,比不过也是很正常的。电爷比我们强难道不是事实吗？"
     me "噗……所以你玩了一节课手机是吧。"
     obedience "诶诶,被发现了吗？我只是……偶尔溜下号啦,其实我还是在听的。"
+    show c_normal at farleft
     cordelia "上课不认真听课是不对的。"
     sayori "好啦好啦,这栋教学楼附近没食堂,大家都要先回宿舍放书包再吃饭吧？走咯~"
+    hide c_normal
+    hide o_mean
+    hide s_happy
     "跟谁一起走？"
     menu:
         "sayori":

@@ -73,21 +73,49 @@ default persistent.achievements = {}
 
 ''')
         
-        # 图片和音频资源定义
-        f.write("# 图片和音频资源定义\n")
+        # 图片和音频资源定义(注释掉的是旧版本)
+        # f.write("# 图片和音频资源定义\n")
         f.write("init:\n")
+        # f.write("    # 位置变换\n")
+        # f.write("    transform left:\n")
+        # f.write("        xalign 0.2\n")
+        # f.write("    transform right:\n")
+        # f.write("        xalign 0.8\n")
+        # f.write("    transform center:\n")
+        # f.write("        xalign 0.5\n")
+        # f.write("    transform slight_left:\n")
+        # f.write("        xalign 0.3\n")
+        # f.write("    transform slight_right:\n")
+        # f.write("        xalign 0.7\n")
+        # f.write("    \n")
         f.write("    # 位置变换\n")
+        f.write("    transform trueleft:\n")
+        f.write("        xalign 0.0\n")
+        f.write("    transform leftish:\n") 
+        f.write("        xalign 0.1\n")
         f.write("    transform left:\n")
         f.write("        xalign 0.2\n")
-        f.write("    transform right:\n")
-        f.write("        xalign 0.8\n")
-        f.write("    transform center:\n")
-        f.write("        xalign 0.5\n")
         f.write("    transform slight_left:\n")
         f.write("        xalign 0.3\n")
+        f.write("    transform center:\n")
+        f.write("        xalign 0.5\n")
         f.write("    transform slight_right:\n")
         f.write("        xalign 0.7\n")
-        f.write("    \n")
+        f.write("    transform right:\n")
+        f.write("        xalign 0.8\n")
+        f.write("    transform rightish:\n")
+        f.write("        xalign 0.9\n")
+        f.write("    transform trueright:\n")
+        f.write("        xalign 1.0\n")
+        f.write("    transform farleft:\n")
+        f.write("        xalign -0.15\n")  # 比屏幕左侧更左
+        f.write("    transform farright:\n")
+        f.write("        xalign 1.15\n")   # 比屏幕右侧更右
+        f.write("    transform maxleft:\n")
+        f.write("        xalign -0.5\n")  # 更极端的左侧位置
+        f.write("    transform maxright:\n")
+        f.write("        xalign 1.5\n")   # 更极端的右侧位置
+
         f.write("    # 背景图片\n")
         f.write('    image bg black = "#000"\n')
         f.write('    image bg white = "#fff"\n')
@@ -317,14 +345,14 @@ default persistent.achievements = {}
                 elif ' at ' in content:
                     # 角色立绘带位置，格式: "图片标识 at 位置"
                     char_part, position = content.split(' at ', 1)
-                    f.write(f'    show {char_part} at {position} with dissolve\n')
+                    f.write(f'    show {char_part} at {position}\n')
                 else:
                     # 直接显示图片
-                    f.write(f'    show {content} with dissolve\n')
+                    f.write(f'    show {content}\n')
                     
             elif speaker == 'hide':
                 # 隐藏立绘
-                f.write(f'    hide {content} with dissolve\n')
+                f.write(f'    hide {content}\n')
                     
             elif speaker == 'music':
                 # 播放音乐

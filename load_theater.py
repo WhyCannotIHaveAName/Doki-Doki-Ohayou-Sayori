@@ -157,14 +157,14 @@ def convert_theater_content(theater_file, theater_label):
                 elif ' at ' in content:
                     # 角色立绘带位置
                     char_part, position = content.split(' at ', 1)
-                    renpy_code += f'    show {char_part} at {position} with dissolve\n'
+                    renpy_code += f'    show {char_part} at {position}\n'
                 else:
                     # 直接显示图片
-                    renpy_code += f'    show {content} with dissolve\n'
+                    renpy_code += f'    show {content}\n'
                     
             elif speaker == 'hide':
                 # 隐藏立绘
-                renpy_code += f'    hide {content} with dissolve\n'
+                renpy_code += f'    hide {content}\n'
                     
             elif speaker == 'music':
                 if content == 'stop':

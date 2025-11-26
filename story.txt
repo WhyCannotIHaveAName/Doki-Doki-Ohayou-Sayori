@@ -7,7 +7,7 @@
 #剧本的格式是：当前章节号,说话人,说话内容。如果出现了jump或者选项,就要跳转到该行最后的章节号。
 #特效、成就-小剧场系统的剧本格式略有不同。
 
-1,image,bbq
+1,image,bg bbq
 1,mind,经过了人生中最漫长的暑假和军训,我的大学生活就这样拉开了序幕。
 1,mind,难以想象啊,不久前的我还在想高考和朋友去向的事情,现在感觉已经好遥远好遥远……
 1,mind,朋友们也在遥远的地方呢……
@@ -19,14 +19,17 @@
 1,sayori,Ohayou！！！（日语里的“早上好”）
 1,me,啊啊啊啊啊？！
 1,image,s_normal at left
+1,music,quiet
 1,me,呼,是你呀,sayori。吓我一大跳。我差点忘了你也来脚大了。
 1,mind,坐在烧烤摊门外的椅子上胡思乱想,突然被萌萌的sayori跳脸了,差点心脏骤停……
 1,mind,不过,sayori总是喜欢突然蹦出来吓人……自从我认识她,她就是这个性子。我啥时候认识她的……那应该是我们很小很小的时候？
+1,hide,s_normal
+1,image,s_happy at center
 1,sayori,呐呐,又开始发呆了？
 1,me,诶诶？
 1,mind,怎么突然拉着我就走啊,我还没emo完呢……
 1,sayori,班会要开始了,快走快走……你去扫辆车吧,我马上跟上。
-1,hide,s_normal
+1,hide,s_happy
 1,mind,虽然说好像是这样,但总感觉她不是因为这个拉我……
 1,mind,悄悄回头看看……啊,果然如此……
 1,image,s_bbq at right
@@ -34,60 +37,97 @@
 1,me,太明显了……而且多少年都是这样吧,你突然作妖绝对是因为吃的。
 1,sayori,嘿嘿……早就在意料之中了喵？不过确实很好吃。
 1,me,重点不是味道啊喂！我的emo时间就这样被打断了,这个才是重点吧！
+1,hide,s_bbq
+1,image,s_joke at center
 1,sayori,不要不开心啦,我不就是因为这个才过来的吗？
 1,sayori,一个人吃烧烤真的好~惨~啊~呜呜呜,且让你的超绝可爱青梅替你分担一些吧~
 1,me,再不去班会就真要迟到了啊！！
-1,mind,结果是：我们吃完了剩下的烤串,但是班会课迟到了。所有人都坐好了。
+1,hide,s_joke
+1,mind,结果是：sayori吃完了剩下的烤串,但是班会课迟到了……
 1,jump,2
 
+2,image,bg classroom
 2,teacher,好的,人终于齐了！大家来做自我介绍吧！我们班人比较多,所以大家简单介绍下自己的爱好就行了……
 2,mind,这么突然？我还没准备好呢！
 2,mind,一个长头发的漂亮女生走上讲台,步子走得很沉稳,看来受过良好的教育。
+2,image,c_normal
 2,cordelia,大家好,我是cordelia。我的爱好只有数学和钢琴,不过平时我是个循规蹈矩的人,可能有点无聊……学习搭子和音乐发烧友可以找我。嗯,就这样。
+2,hide,c_normal
 2,mind,怎么会有人把数学当爱好啊……脚大全是卷狗吧。
+2,image,o_normal
 2,obedience,我叫obedience,我的爱好很多……我喜欢写散文、烘焙、游泳、摄影和吹葫芦丝,我还喜欢玩原神和看帅哥……欢迎大家来找我玩！
+2,hide,o_normal
+2,image,s_joke at left
 2,sayori,到我啦,让我过一下。
 2,me,哦,好的……
+2,hide,s_joke
+2,image,s_hug
 2,sayori（走上讲台）,Ohayou！！（日语里的“早上好”）
 2,me（扶额）,我就知道……
 2,sayori,我是sayori,我喜欢写诗。大家可以来找我哦,我超喜欢交朋友的！有什么不开心的也可以跟我说,我一定会让大家开心起来的~
+2,hide,s_hug
 2,mind,她的确能……也许我应该多和sayori一起玩。……好像漏听了好几个人,不管了,该到我了吧？
 2,teacher,下课了,还有没做自我介绍的吗？啊……好的,没有了,下课吧！
 2,me,诶诶,老师,这里……
 2,me,被无视了……大家都走了吗。
 2,me,教室里好吵啊……
+2,image,s_understanding
 2,sayori（拍肩）,老师能有什么坏心思呢,老师只是急着下班罢了。
 2,mind,……世界平静了。
 2,me,……谢谢你,sayori。
 2,sayori,呆jio不~（日语里的“没关系”）明天见啦！
 2,me,……嗯,我也回去吧。
+2,hide,s_understanding
+2,image,bg_dormnight
 2,mind,军训期间看起来非常摆的舍友似乎都开始内卷了,参加了一大堆比赛,可我还什么都不会呢……大家都在熬夜学习呢……
 2,mind,我好像又开始emo了。这是不是我高考考到这的原因呢……
 2,mind,但凡再高一点点,也不至于来这里了……这个学院老是被群嘲,可是学院里的人还这么卷,那我怎么办……
 2,jump,3
 
+3,image,bg_dormday
 3,mind,…………
 3,mind,啊,醒了。数学早十！快跑快跑。
+3,image,bg_classroom
+3,image,c_happy at farleft
+3,image,s_happy at center
 3,me,早上好,sayori！有座位吗？
-3,sayori,这里这里！我旁边坐了cordelia,你可以坐我后面,在obedience旁边。
+3,sayori,这里这里！cordelia坐我旁边啦,你坐我后面吧？在obedience旁边。
 3,me,这么快就认识新朋友了啊？大家好大家好……
+3,image,o_cute at farright
 3,obedience,哈喽哈喽！我叫obedience,很高兴认识你……
 3,teacher,Silence, please! I'm Professor Cai, and welcome you all to the maths' world!
+3,hide,c_happy
+3,hide,s_happy
+3,hide,o_cute
 3,mind,为什么中国人要讲英语啊……课本身难度倒是还好。真是漫长的一节课。
+3,image,s_understanding
 3,sayori,终于下课了……大家听得怎么样？
+3,image,o_normal at farright
 3,obedience,好难啊！他说了好多我听不懂的东西,好多新名词,感觉没上过这么难懂的数学课。比我高中那个老师帅倒是真的,那个老师……
+3,hide,o_normal
+3,image,c_normal at farleft
 3,cordelia,嗯……其实还好吧。
+3,image,o_surprise at farright
 3,obedience,诶？？可是他一开始讲的那一串东西我就没听懂,比如说……
 3,cordelia,他不就是简单介绍了一下背景知识吗？“现代数学的基础是类型论、集合论、范畴论……”大概就是这些吧。
 3,obedience,嗯……
+3,hide,o_surprise
+3,hide,c_normal
+3,hide,s_understanding
 3,me,讲得这么简单,我们怎么跟电院的比啊……
 3,achievement,脚大2
+3,image,s_happy
 3,sayori,别这么想,我们以后也有比他们难的课吧。
+3,image,o_mean at farright
 3,obedience,嘿嘿,比不过也是很正常的。电爷比我们强难道不是事实吗？
 3,me,噗……所以你玩了一节课手机是吧。
 3,obedience,诶诶,被发现了吗？我只是……偶尔溜下号啦,其实我还是在听的。
+3,image,c_normal at farleft
 3,cordelia,上课不认真听课是不对的。
 3,sayori,好啦好啦,这栋教学楼附近没食堂,大家都要先回宿舍放书包再吃饭吧？走咯~
+3,hide,c_normal
+3,hide,o_mean
+3,hide,s_happy
 3,choice,跟谁一起走？
 3,option,sayori->6
 3,option,cordelia->7
