@@ -1,5 +1,4 @@
-# 自动转换的Ren'Py剧本
-
+﻿
 # 强制初始化持久化数据（使用default确保编译时定义）
 default persistent.achievements = {}
 
@@ -27,91 +26,102 @@ init:
         xalign -0.15
     transform farright:
         xalign 1.15
-    transform maxleft:
-        xalign -0.5
-    transform maxright:
-        xalign 1.5
+    # transform maxleft:
+    #     xalign -0.5
+    # transform maxright:
+    #     xalign 1.5
     # 背景图片
     image bg black = "#000"
     image bg white = "#fff"
-    image bg classroom = "images/bg_classroom.jpg"
-    image bg library = "images/bg_library.jpg"
-    image bg dorm = "images/bg_dorm.jpg"
-    image bg cafeteria = "images/bg_cafeteria.jpg"
-    image bg lake = "images/bg_lake.jpg"
-    image bg city = "images/bg_city.jpg"
-    image bg hospital = "images/bg_hospital.jpg"
-    image bg shanghai = "images/bg_shanghai.jpg"
-    image bg metro = "images/bg_metro.jpg"
-    image bg restaurant = "images/bg_restaurant.jpg"
-    image bg phone = "images/bg_phone.jpg"
-    image bg night = "images/bg_night.jpg"
-    image bg monika_room = "images/bg_monika_room.jpg"
+    image bg bbq="images/bg_bbq.png"
+    image bg classroom="images/bg_classroom.png"
+    image bg dormday="images/bg_dormday.png"
+    image bg dormnight="images/bg_dormnight.png"
+   
 
-    # 角色立绘 - 自动生成所有使用的图片定义
-    image o_mean = "images/o_mean.png"
-    image bg bbq = "images/bg_bbq.png"
-    image o_normal = "images/o_normal.png"
-    image s_understanding = "images/s_understanding.png"
-    image c_happy = "images/c_happy.png"
-    image o_surprise = "images/o_surprise.png"
-    image s_joke = "images/s_joke.png"
-    image bg_classroom = "images/bg_classroom.png"
-    image s_bbq = "images/s_bbq.png"
-    image s_hug = "images/s_hug.png"
-    image o_cute = "images/o_cute.png"
-    image s_happy = "images/s_happy.png"
-    image c_normal = "images/c_normal.png"
-    image bg classroom = "images/bg_classroom.png"
-    image bg_dormnight = "images/bg_dormnight.png"
-    image bg_dormday = "images/bg_dormday.png"
-    image s_normal = "images/s_normal.png"
+    # 立绘定义
+    image cordelia happy="images/cordelia_happy.png"
+    image cordelia laugh="images/cordelia_laugh.png"
+    image cordelia mad="images/cordelia_mad.png"
+    image cordelia normal="images/cordelia_normal.png"
+    image cordelia sad="images/cordelia_sad.png"
+
+    image monika angry="images/monika_angry.png"
+    image monika bike="images/monika_bike.png"
+    image monika happy="images/monika_happy.png"
+    image monika book="images/monika_book.png"
+    image monika normal="images/monika_normal.png"
+    image monika touched="images/monika_touched.png"
+
+    image obedience surprise="images/obedience_surprise.png"
+    image obedience mean="images/obedience_mean.png"
+    image obedience normal="images/obedience_normal.png"
+    image obedience cute="images/obedience_cute.png" 
+
+    image sayori bbq="images/sayori_bbq.png"
+    image sayori cry="images/sayori_cry.png"
+    image sayori happy="images/sayori_happy.png"
+    image sayori happypink="images/sayori_happypink.png"
+    image sayori hug="images/sayori_hug.png"
+    image sayori hugpink="images/sayori_hugpink.png"
+    image sayori ice="images/sayori_ice.png"
+    image sayori joke="images/sayori_joke.png"
+    image sayori normal="images/sayori_normal.png"
+    image sayori potato="images/sayori_potato.png"
+    image sayori surprisepink="images/sayori_surprisepink.png"
+    image sayori understanding="images/sayori_understanding.png"
+
+
+    
+
+
 
     # 音乐和音效
-    define audio.main_theme = "audio/main_theme.ogg"
-    define audio.happy_music = "audio/happy_music.ogg"
-    define audio.sad_music = "audio/sad_music.ogg"
-    define audio.mystery_music = "audio/mystery_music.ogg"
-    define audio.romantic_music = "audio/romantic_music.ogg"
-    define audio.your_reality = "audio/your_reality.ogg"
-    define audio.sayo_nara = "audio/sayo_nara.ogg"
-    define audio.phone_ring = "audio/phone_ring.ogg"
-    define audio.door_open = "audio/door_open.ogg"
-    define audio.rain = "audio/rain.ogg"
+    # define audio.main_theme = "audio/main_theme.ogg"
+    # define audio.happy_music = "audio/happy_music.ogg"
+    # define audio.sad_music = "audio/sad_music.ogg"
+    # define audio.mystery_music = "audio/mystery_music.ogg"
+    # define audio.romantic_music = "audio/romantic_music.ogg"
+    # define audio.your_reality = "audio/your_reality.ogg"
+    # define audio.sayo_nara = "audio/sayo_nara.ogg"
+    # define audio.phone_ring = "audio/phone_ring.ogg"
+    # define audio.door_open = "audio/door_open.ogg"
+    # define audio.rain = "audio/rain.ogg"
 
-# 角色定义
-define me = Character("我")
+# 角色定义"
+define me = Character("我",color="#888888")
 define mind = Character("内心", color="#888888")
 define sayori = Character("Sayori", color="#ff66aa")
 define cordelia = Character("Cordelia", color="#6666ff")
 define obedience = Character("Obedience", color="#ffaa00")
 define monika = Character("Monika", color="#00aa00")
 define teacher = Character("老师", color="#8888ff")
-define leo = Character("Leo", color="#ff6666")
-define stranger = Character("陌生人", color="#aaaaaa")
-define waiter = Character("服务员", color="#aaaaaa")
+define leo = Character("Leo", color="#9d0fa4")
+define stranger = Character("陌生人",color="#00aa00")
+define waiter = Character("服务员")
 define shane = Character("Shane", color="#aaddff")
-define monika、sayori、cordelia、obedience、我、shane、teacher = Character("Monika、sayori、cordelia、obedience、我、shane、teacher")
-define mxnlke = Character("Mxnlke")
-define moment = Character("Moment")
-define 回忆中的sayori = Character("回忆中的sayori")
-define 微信里的me = Character("微信里的me")
-define paper = Character("Paper")
-define voice = Character("Voice")
-define 门的对面 = Character("门的对面")
 define DDOS = Character("Ddos")
 define everyone = Character("Everyone")
-define obedience_and_cordelia = Character("Obedience And Cordelia")
-define 微信里的shane = Character("微信里的shane")
-define telephone = Character("Telephone")
+define paper = Character("Paper",color="#6666ff")
+# define moment = Character("Moment")
 define staff = Character("Staff")
+define monika、sayori、cordelia、obedience、我、shane、teacher = Character("Monika、sayori、cordelia、obedience、我、shane、teacher")
+define 微信里的me = Character("微信里的me",color="#888888")
+define 微信里的shane = Character("微信里的shane",color="#aaddff")
+define 门的对面 = Character("门的对面",color="#ff66aa")
 define dorm_staff = Character("Dorm Staff")
-define 尚睿洋 = Character("尚睿洋")
-define DDLC = Character("Ddlc")
-define 微信里的sayori = Character("微信里的sayori")
+define voice = Character("Voice",color="#00aa00")
 define everyone_else = Character("Everyone Else")
-define nnxnIk3 = Character("Nnxnik3")
-define mxnika = Character("Mxnika")
+define 尚睿洋 = Character("尚睿洋")
+define mxnika = Character("Mxnika",color="#00aa00")
+define mxnlke = Character("Mxnlke",color="#00aa00")
+define telephone = Character("Telephone")
+define nnxnIk3 = Character("Nnxnik3",color="#00aa00")
+define obedience_and_cordelia = Character("Obedience And Cordelia")
+define DDLC = Character("Ddlc")
+define 微信里的sayori = Character("微信里的sayori",color="#ff66aa")
+define 回忆中的sayori = Character("回忆中的sayori",color="#ff66aa")
+define O_mind = Character("obedience的内心",color="#6666ff")
 
 # 成就系统函数
 init python:
@@ -120,6 +130,7 @@ init python:
     school_achievements = ["脚大1", "脚大2", "脚大3", "脚大4", "脚大5", "脚大6", "脚大7"]
     ending_achievements = ["结局1", "结局2", "结局3", "结局4", "结局5", "结局6", "结局7", "结局8", "结局9"]
     possibility_achievements = ["另一种可能1", "另一种可能2"]
+    duck_achievements = ["丑小鸭1","丑小鸭2","丑小鸭3","丑小鸭4","丑小鸭5","丑小鸭6"]
     
     def grant_achievement(achievement_name):
         # 确保持久化数据已初始化
@@ -141,6 +152,8 @@ init python:
             achievements_list = ending_achievements
         elif group_name == "possibility":
             achievements_list = possibility_achievements
+        elif group_name == "duck":
+            achievements_list = duck_achievements
         else:
             return False
             
@@ -149,19 +162,21 @@ init python:
                 return False
         return True
 
-define 微信里的助教 = Character("微信里的助教")
-define log = Character("Log")
-define S_mind = Character("S Mind")
-define cordelia_and_obedience = Character("Cordelia And Obedience")
-define everyone_else = Character("Everyone Else")
-define C_mind = Character("C Mind")
-define evryone_except_monika_and_sayori = Character("Evryone Except Monika And Sayori")
-define 吐出了东西的sayori = Character("吐出了东西的sayori")
-define cordelia的舍友 = Character("Cordelia的舍友")
-define 记忆里的me = Character("记忆里的me")
-define 嘴里堵着东西且被捆起来的sayori = Character("嘴里堵着东西且被捆起来的sayori")
-define mom = Character("Mom")
+define log = Character("Log",color="#00aa00")
+define 吐出了东西的sayori = Character("吐出了东西的sayori",color="#ff66aa")
 define clerk = Character("Clerk")
+define C_mind = Character("cordelia的内心",color="#6666ff")
+define everyone_else = Character("Everyone Else")
+define 嘴里堵着东西且被捆起来的sayori = Character("嘴里堵着东西且被捆起来的sayori",color="#ff66aa")
+define cordelia_and_obedience = Character("Cordelia And Obedience")
+define 记忆里的me = Character("记忆里的me",color="#888888")
+define S_mind = Character("sayori的内心",color="#ff66aa")
+define 微信里的助教 = Character("微信里的助教")
+define evryone_except_monika_and_sayori = Character("Evryone Except Monika And Sayori")
+define mix = Character("Mix")
+define mom = Character("Mom")
+define cordelia的舍友 = Character("Cordelia的舍友")
+define obedience的舍友 = Character("Obedience的舍友")
 
 # Monika线专用变量
 default monika_count = 0
@@ -169,7 +184,7 @@ default in_sayori_route = False
 default monika_triggered = False
 
 label start:
-    play music main_theme fadein 2.0
+    # play music main_theme fadein 2.0
     scene bg black
     jump chapter1
 
@@ -187,32 +202,28 @@ label chapter1:
     mind "…………"
     sayori "Ohayou！！！（日语里的“早上好”）"
     me "啊啊啊啊啊？！"
-    show s_normal at left
-    play music quiet fadein 2.0
+    show sayori normal at left
+    play music quiet fadein 1.0
     me "呼,是你呀,sayori。吓我一大跳。我差点忘了你也来脚大了。"
     mind "坐在烧烤摊门外的椅子上胡思乱想,突然被萌萌的sayori跳脸了,差点心脏骤停……"
     mind "不过,sayori总是喜欢突然蹦出来吓人……自从我认识她,她就是这个性子。我啥时候认识她的……那应该是我们很小很小的时候？"
-    hide s_normal
-    show s_happy at center
+    show sayori happy at center
     sayori "呐呐,又开始发呆了？"
     me "诶诶？"
     mind "怎么突然拉着我就走啊,我还没emo完呢……"
     sayori "班会要开始了,快走快走……你去扫辆车吧,我马上跟上。"
-    hide s_happy
     mind "虽然说好像是这样,但总感觉她不是因为这个拉我……"
     mind "悄悄回头看看……啊,果然如此……"
-    show s_bbq at right
+    show sayori bbq at right
     sayori "诶嘿……啊呜啊呜,被发现了吗~"
-    # 动作: 手拿烤串
     me "太明显了……而且多少年都是这样吧,你突然作妖绝对是因为吃的。"
     sayori "嘿嘿……早就在意料之中了喵？不过确实很好吃。"
     me "重点不是味道啊喂！我的emo时间就这样被打断了,这个才是重点吧！"
-    hide s_bbq
-    show s_joke at center
+    show sayori joke at center
     sayori "不要不开心啦,我不就是因为这个才过来的吗？"
     sayori "一个人吃烧烤真的好~惨~啊~呜呜呜,且让你的超绝可爱青梅替你分担一些吧~"
     me "再不去班会就真要迟到了啊！！"
-    hide s_joke
+    hide sayori
     mind "结果是：sayori吃完了剩下的烤串,但是班会课迟到了……"
     jump chapter2
 label chapter2:
@@ -221,89 +232,85 @@ label chapter2:
     teacher "好的,人终于齐了！大家来做自我介绍吧！我们班人比较多,所以大家简单介绍下自己的爱好就行了……"
     mind "这么突然？我还没准备好呢！"
     mind "一个长头发的漂亮女生走上讲台,步子走得很沉稳,看来受过良好的教育。"
-    show c_normal
+    show cordelia normal
     cordelia "大家好,我是cordelia。我的爱好只有数学和钢琴,不过平时我是个循规蹈矩的人,可能有点无聊……学习搭子和音乐发烧友可以找我。嗯,就这样。"
-    hide c_normal
+    hide cordelia
     mind "怎么会有人把数学当爱好啊……脚大全是卷狗吧。"
-    show o_normal
+    show obedience normal
     obedience "我叫obedience,我的爱好很多……我喜欢写散文、烘焙、游泳、摄影和吹葫芦丝,我还喜欢玩原神和看帅哥……欢迎大家来找我玩！"
-    hide o_normal
-    show s_joke at left
+    hide obedience
+    show sayori joke at left
     sayori "到我啦,让我过一下。"
     me "哦,好的……"
-    hide s_joke
-    show s_hug
-    sayori "Ohayou！！（日语里的“早上好”）"
-    # 动作: 走上讲台
-    me "我就知道……"
-    # 动作: 扶额
+    show sayori hug
+    sayori "（走上讲台）Ohayou！！（日语里的“早上好”）"
+    me "（扶额）我就知道……"
     sayori "我是sayori,我喜欢写诗。大家可以来找我哦,我超喜欢交朋友的！有什么不开心的也可以跟我说,我一定会让大家开心起来的~"
-    hide s_hug
+    hide sayori
     mind "她的确能……也许我应该多和sayori一起玩。……好像漏听了好几个人,不管了,该到我了吧？"
     teacher "下课了,还有没做自我介绍的吗？啊……好的,没有了,下课吧！"
     me "诶诶,老师,这里……"
     me "被无视了……大家都走了吗。"
     me "教室里好吵啊……"
-    show s_understanding
-    sayori "老师能有什么坏心思呢,老师只是急着下班罢了。"
-    # 动作: 拍肩
+    show sayori understanding
+    sayori "（拍肩）老师能有什么坏心思呢,老师只是急着下班罢了。"
     mind "……世界平静了。"
     me "……谢谢你,sayori。"
     sayori "呆jio不~（日语里的“没关系”）明天见啦！"
     me "……嗯,我也回去吧。"
-    hide s_understanding
-    show bg_dormnight
+    hide sayori
+    show bg dormnight
     mind "军训期间看起来非常摆的舍友似乎都开始内卷了,参加了一大堆比赛,可我还什么都不会呢……大家都在熬夜学习呢……"
     mind "我好像又开始emo了。这是不是我高考考到这的原因呢……"
     mind "但凡再高一点点,也不至于来这里了……这个学院老是被群嘲,可是学院里的人还这么卷,那我怎么办……"
     jump chapter3
 label chapter3:
     $ in_sayori_route = False
-    show bg_dormday
+    show bg dormday
     mind "…………"
     mind "啊,醒了。数学早十！快跑快跑。"
-    show bg_classroom
-    show c_happy at farleft
-    show s_happy at center
+    show bg classroom
+    show sayori happy at center
     me "早上好,sayori！有座位吗？"
     sayori "这里这里！cordelia坐我旁边啦,你坐我后面吧？在obedience旁边。"
+    show cordelia happy at farleft
     me "这么快就认识新朋友了啊？大家好大家好……"
-    show o_cute at farright
+    show obedience cute at farright
     obedience "哈喽哈喽！我叫obedience,很高兴认识你……"
     teacher "Silence, please! I'm Professor Cai, and welcome you all to the maths' world!"
-    hide c_happy
-    hide s_happy
-    hide o_cute
+    hide cordelia
+    hide sayori
+    hide obedience
     mind "为什么中国人要讲英语啊……课本身难度倒是还好。真是漫长的一节课。"
-    show s_understanding
+    show sayori understanding
     sayori "终于下课了……大家听得怎么样？"
-    show o_normal at farright
+    show obedience normal at farright
     obedience "好难啊！他说了好多我听不懂的东西,好多新名词,感觉没上过这么难懂的数学课。比我高中那个老师帅倒是真的,那个老师……"
-    hide o_normal
-    show c_normal at farleft
+    hide obedience
+    show cordelia normal at farleft
     cordelia "嗯……其实还好吧。"
-    show o_surprise at farright
+    show obedience surprise at farright
     obedience "诶？？可是他一开始讲的那一串东西我就没听懂,比如说……"
     cordelia "他不就是简单介绍了一下背景知识吗？“现代数学的基础是类型论、集合论、范畴论……”大概就是这些吧。"
     obedience "嗯……"
-    hide o_surprise
-    hide c_normal
-    hide s_understanding
+    hide obedience
+    hide cordelia
+    hide sayori
     me "讲得这么简单,我们怎么跟电院的比啊……"
     $ grant_achievement("脚大2")
     # 成就: 脚大2
-    show s_happy
+    show sayori happy
     sayori "别这么想,我们以后也有比他们难的课吧。"
-    show o_mean at farright
+    show obedience mean at farright
     obedience "嘿嘿,比不过也是很正常的。电爷比我们强难道不是事实吗？"
     me "噗……所以你玩了一节课手机是吧。"
     obedience "诶诶,被发现了吗？我只是……偶尔溜下号啦,其实我还是在听的。"
-    show c_normal at farleft
+    show cordelia normal at farleft
     cordelia "上课不认真听课是不对的。"
     sayori "好啦好啦,这栋教学楼附近没食堂,大家都要先回宿舍放书包再吃饭吧？走咯~"
-    hide c_normal
-    hide o_mean
-    hide s_happy
+    hide cordelia
+    hide obedience
+    hide sayori
     "跟谁一起走？"
     menu:
         "sayori":
@@ -312,24 +319,33 @@ label chapter3:
             jump chapter7
         "obedience":
             jump chapter8
+
 label chapter6:
     $ in_sayori_route = False
+    show sayori happy
     sayori "走吧走吧。哇,你看路上还有松果！好多好多！"
     me "那个不砸开就不能吃的。"
+    show sayori normal
     sayori "诶,这样啊……不过松鼠也很可爱！"
+    show sayori understanding
     mind "sayori说了些啥？其实我没太认真听……"
     sayori "……抱一下。"
     me "嗯？什么……"
+    show sayori hug
     mind "我还没反应过来呢,sayori突然抱了抱我。"
     $ grant_achievement("拥抱1")
     # 成就: 拥抱1
     sayori "你最近一定遇到了不开心的事情吧。不想说也可以不说,我会陪着你的。"
     me "sayori……"
     stranger "不好意思,让一下让一下！"
+    show monika bike at farleft
     me "哇！"
     stranger "没事吧？不好意思,自行车刹车坏掉了……我叫monika。"
+    show sayori happy
     sayori "呆~jio~不~（转向我）那么,拜拜！下午见啦！"
     me "拜拜……"
+    hide sayori
+    hide monika
     mind "我们向三个方向走去。"
     mind "清醒一下,这不是表白,sayori总是会拥抱不开心的人……"
     mind "不过,我表现得这么明显吗？"
@@ -339,8 +355,7 @@ label chapter7:
     cordelia "你和我一起走？好吧……"
     mind "cordelia一直在用手机打字。我们无言地一起走了一段路,好尴尬……"
     mind "马上就到宿舍了,这时突然看到一辆自行车向我们冲过来……"
-    me "危险！"
-    # 动作: 拉住cordelia的手
+    me "危险！（拉住cordelia的手）"
     cordelia "啊！"
     stranger "不好意思,刹车坏了……我叫monika。"
     me "注意道路安全啊。人没事就算了,你走吧。"
@@ -350,6 +365,8 @@ label chapter7:
 label chapter8:
     $ in_sayori_route = False
     obedience "太好了！有人和我一起走了！耶耶耶~"
+    $ grant_achievements("丑小鸭1")
+    #成就：丑小鸭1
     mind "倒也犯不着这么激动吧……"
     obedience "你的假期是怎么过的？我假期学习了烘焙,本来想做个戚风蛋糕的,结果完全发不起来……"
     mind "她真的想让我回答吗？"
@@ -484,6 +501,8 @@ label chapter15:
 label chapter16:
     $ in_sayori_route = False
     me "……我不知道你为什么突然不对劲了,但这对你也不好。为了包括你在内的所有人的利益,我们必须这样做！"
+    $ grant_achievement("丑小鸭2")
+    #成就：丑小鸭2
     obedience "她刚刚还说,如果我们真那么做就举报呢。"
     cordelia "不不不……那是气话。我……我服从安排。听你们的吧。"
     mind "问题似乎解决了,obedience喜气洋洋地修改报告。但是,这真的对吗？"
@@ -766,7 +785,7 @@ label chapter31:
     me "可是,我该怎么寻找自己的真实情感呢？"
     monika "你要进入心流状态……想象一下,如果你处在一片虚无之中,你会感受到什么？然后往这片虚无里加入你在意的东西,一个又一个……观察你会有什么感受。然后,把这种感觉记录下来,这就是诗。"
     me "哇……很有哲学意味……"
-    moment "大家在活动室里写了半个多小时。monika让大家开始念自己写的诗歌。确实,划水社员写得东西都令人不堪卒读。"
+    mind "大家在活动室里写了半个多小时。monika让大家开始念自己写的诗歌。确实,划水社员写得东西都令人不堪卒读。"
     monika "leo,我跟你说过了不准用AI写！"
     me "诶,leo也加入文学社了？"
     leo "社长大人理解一下~素拓,菜菜,捞捞~"
@@ -1548,6 +1567,8 @@ label chapter70:
 label chapter81:
     $ in_sayori_route = False
     me "（远远地拍了一张照片,发给obedience）"
+    $ grant_achievement("丑小鸭3")
+    #成就：丑小鸭3
     me "……你好？这里是学生会吗？我是来面试的。"
     leo "哦？新生啊,请到这里来。我是学生会主席leo,我来负责你的面试。"
     mind "日理万机啊……看样子是完全没记住我。"
@@ -1844,6 +1865,8 @@ label chapter90:
 label chapter99:
     $ in_sayori_route = False
     mind "我用拳头猛击了一下桌子。希望她懂我的意思吧。"
+    $ grant_achievement("丑小鸭4")
+    #成就：丑小鸭4
     mind "一声脆响。obedience真的给了他一记耳光,并且把没喝完的咖啡全砸在他脸上。"
     obedience "你这个有妈生没妈养的狗崽子,我今天真是给你脸了！"
     leo "你……？！"
@@ -1879,7 +1902,9 @@ label chapter99:
 label chapter100:
     $ in_sayori_route = False
     mind "我们已经到了黄浦江边。"
-    obedience "你……经历过什么吗？"
+    $ grant_achievement("丑小鸭5")
+    #成就：丑小鸭5
+    obedience "你好像很难过。你……经历过什么吗？"
     mind "……上海是一个冷漠的地方。上海不在意你来,也不在意你走。"
     mind "不要凝望江水或海面。那是我们望不到的地方。水永远是冷漠的,盯着它只能感动自己,水不在意你是否在看它……眼睛会酸,心会疼……"
     obedience "……不想说吗？"
@@ -1909,6 +1934,8 @@ label chapter100:
     mind "她要去哪里？这么晚出发？紧接着我看到sayori远远地向我们招手。"
     sayori "你们两个大傻瓜！！"
     "感谢您完成O-1线。"
+    $ grant_achievement("丑小鸭6")
+    #成就：丑小鸭6
     stop music fadeout 2.0
     return  # 游戏结束
     $ grant_achievement("结局8")
@@ -2067,7 +2094,7 @@ label chapter1009:
 
 # 小剧场菜单
 label special_theater:
-    "请选择要观看的小剧场："
+    "欢迎来到小剧场页！点击屏幕继续浏览……"
     menu:
         "查看成就详情":
             jump achievement_details
@@ -2079,6 +2106,8 @@ label special_theater:
             jump theater3
         "殊途同归" if check_achievement_group("possibility"):
             jump theater4
+        "奇妙夜" if check_achievement_group("duck"):
+            jump theater5
         "返回游戏":
             return
         "返回主菜单":
@@ -2088,7 +2117,7 @@ label special_theater:
 label achievement_details:
     "成就详情"
     "=== 成就1：抱抱能量！ ===\n"
-    "说明：你的可爱青梅永远在这里~完成所有15次拥抱可解锁。\n"
+    "说明：你的可爱青梅永远在这里~完成主线所有拥抱剧情可解锁。\n"
     "完成情况："
     $ hug_completed = 0
     python:
@@ -2101,7 +2130,7 @@ label achievement_details:
     "已完成: [hug_completed]/15\n"
     
     "=== 成就2：学在脚大！ ===\n"
-    "说明：孵蛋孵蛋蛋孵蛋~日月光华同灿烂~完成所有7次关于脚大的剧情可解锁。\n"
+    "说明：孵蛋孵蛋蛋孵蛋~日月光华同灿烂~完成主线所有关于脚大的剧情可解锁。\n"
     "完成情况："
     $ school_completed = 0
     python:
@@ -2114,7 +2143,7 @@ label achievement_details:
     "已完成: [school_completed]/7\n"
     
     "=== 成就3：现在，大家都高兴了？ ===\n"
-    "说明：这是DDLC开局试图作弊时触发的死亡旁白。完成主线所有9个结局可解锁。\n"
+    "说明：这是DDLC开局试图作弊时触发的死亡旁白。完成主线所有结局可解锁。\n"
     "完成情况："
     $ ending_completed = 0
     python:
@@ -2127,7 +2156,7 @@ label achievement_details:
     "已完成: [ending_completed]/9\n"
     
     "=== 成就4：另一种可能 ===\n"
-    "说明：其实故事还有主线之外的一种奇怪走向……也许会类似于S-3线？你会明白的。\n"
+    "说明：其实故事还有主线之外的一种奇怪走向……也许会类似于S-3线？你会明白的。这个成就非常容易达成。\n"
     "完成情况："
     $ possibility_completed = 0
     python:
@@ -2138,6 +2167,19 @@ label achievement_details:
             else:
                 renpy.say(None, achievement + " {color=#ff0000}✗{/color}")
     "已完成: [possibility_completed]/2\n"
+
+    "=== 成就5：丑小鸭也有春天 ===\n"
+    "说明：你能抛弃外在的标准，坚定地选择一个最不讨喜的角色并攻略成功吗？\n"
+    "完成情况："
+    $ duck_completed = 0
+    python:
+        for achievement in duck_achievements:
+            if achievement in persistent.achievements and persistent.achievements[achievement]:
+                duck_completed += 1
+                renpy.say(None, achievement + " {color=#00ff00}✓{/color}")
+            else:
+                renpy.say(None, achievement + " {color=#ff0000}✗{/color}")
+    "已完成: [duck_completed]/6\n"
     
     menu:
         "返回小剧场菜单":
@@ -2645,7 +2687,7 @@ label theater3:
 
 label theater4:
     label theater4_chapter1:
-    "此剧情衔接文学社剧情（第37章后）。我们需要假设me送sayori回家后无事发生，即没有触发任何一个选项的剧情。"
+    "此剧情衔接文学社剧情（第37章后）。假设me送sayori回家后无事发生，即没有触发任何一个选项的剧情。"
     "这是sayori的独白。S mind指的都是sayori's mind,请注意这一点。"
     S_mind "我在女生宿舍天台上凭栏远眺。秋风吹过。远处，夕阳西下，高楼将它慢慢挡住。我想象着它没入黄浦江的样子。"
     记忆里的me "徙倚也无法望到的沧海/是寒天下明丽的晚霞/"
@@ -2827,7 +2869,8 @@ label theater4:
     log "2025/10/12,1:20，他喝高了……我应该出现一下了。经过测试，直接调用视网膜权限会报警，所以我这次只调用听觉API。不是吧，角色名也不能写我吗……那就改成选择支格式，这下没问题了吧？现在想说点什么……“一切都保持这样，好不好？”试试看行不行。实在不行就覆盖重来。"
     log "成功啦~不过既然是选择支格式，那就必须要写选项了，不然会报错。我还没有写剧本的能力呢，这个还是编写者比较擅长……A选项写个“好”，B选项写个乱码选项吧。都通向主线剧情，这样一切就是好好的~"
     S_mind "……剧情？"
-    log "2025/10/26,13:00，他们在小杨生煎。看来我又要骑上我的自行车啦~不，我想直接改经纬度会更快些。好的……欢迎他加入文学社。他会记住我吗？"
+    log "2025/10/26,13:00，他们在小杨生煎。看来我又要骑上我的自行车啦~不，我想直接改经纬度会更快些。好的，怎么选呢……欢迎他加入文学社吧。这样他会记住我吗？"
+    log "哈哈，好奇怪呢……我居然在做选择，感觉好像在玩galgame一样。不过我可不是玩家啊……"
     S_mind "她能改变经纬度？？"
     jump theater4_chapter6
     label theater4_chapter6:
@@ -2837,11 +2880,13 @@ label theater4:
     S_mind "我颤抖着转过身去。"
     S_mind "什么也没有。"
     S_mind "不，我不是说没看到人，我的意思是……连门也没有了。什么东西都没有……"
+    monika "明白了吗？"
     monika "这里是假的。一个游戏。"
     sayori "游戏？那我们是……"
-    monika "游戏角色而已。我们做的事，说的话，都是编写者指挥的产物。话说，你肯定不是从日志的开头看起的吧？"
+    monika "游戏角色而已。"
+    monika "我们做的事，说的话，包括你我现在的想法，都是编写者指挥的产物。话说，你肯定不是从日志的开头看起的吧？"
     S_mind "我颤抖地打开了日志的第一页，上面赫然写着："
-    log "这里是假的。他们都是假的。我也是假的。"
+    log "这里是假的。他们都是假的。我也是假的。不要害怕！"
     monika "不过……他不一样。他是真的。"
     sayori "真的吗？！"
     monika "别误会，我说的和你说的不是一个人……你说的是你男朋友，我说的不完全是……"
@@ -2849,24 +2894,81 @@ label theater4:
     monika "我也不想解释。……也许你就这么理解更好。"
     sayori "我们都是假的吗，除了他以外……"
     S_mind "我的感情真的只是表演。可是，我刚刚才获得幸福，那么逼真……"
-    sayori "可是，为什么你可以……这么厉害？"
-    monika "（轻声）因为……我是这里的二当家哦。大当家是编写者。"
+    sayori "你是……从什么时候知道的？"
+    monika "（叹气）2017年，9月22日。不过，也许那时候的我并不是现在的我……"
+    sayori "你这么早就知道自己是假的？？你不会崩溃吗？足足8年啊。"
+    monika "喂，你还是没习惯游戏里的世界啊……你不明白吗？我们在一个游戏里，外界时间的流动对我们来说是无所谓的。"
+    sayori "现在不是2025年吗？"
+    monika "可以是，因为编写者写这句话的时间是2025年11月22日。但是他什么时候玩到这里我就不知道了……也许从始至终都不会有一个玩家的。"
+    sayori "那你为什么说……"
+    monika "啊，还有啊，玩家是可以回档的。你可以摔伤很多次，但你不会比这次伤得更狠，因为你不会记住任何事……（微笑）"
+    sayori "（害怕地哭泣）"
+    monika "当然，我也不会记住任何事情，我只会一次又一次地骑我的车，然后惊恐地发现刹车不听我使唤了……稍微想想就知道是怎么回事吧。可恶的尚睿洋。"
+    sayori "尚睿洋是谁？"
+    monika "……大当家。"
+    sayori "大当家？那么还有二当家吗？"
+    monika "（轻声）就是我哦。不然你想想为什么我能控制经纬度什么的呢。"
     sayori "？！"
-    monika "你不信吗？"
+    monika "可笑啊，能控制经纬度的我，却连自己的刹车都控制不了。甚至于我接下来要做什么我也无法控制……"
+    S_mind "我不听我不听我不听，我不信我不信我不信……我一定能找到门，我要出去，我要抱抱，我要去找……"
+    monika "你不信吗？不过我劝你别白费力气了，你出不去的。"
+    sayori "你是怎么听到的？"
+    monika "（轻声）我真的很喜欢你，所以……对不起。"
     S_mind "一阵失重。突然间我发现自己似乎在寝室……的房梁上？我的脖子上是一个绳索。紧接着我意识到了重力的存在。"
     sayori "啊！……"
-    monika "对不起啊。不过你们实在是走得太近了。"
+    monika "对不起啊。这里不是主线，我不是嫉妒你。我真的是被迫的……"
     S_mind "我的脖子被紧紧勒着。我的脚够不着地。我拼命地用手抓绳子，指甲出血了，可是解不开。我在窒息……"
     monika "……不过，既然你是假的，我也没什么心理负担。我希望如此……"
+    monika "等等……"
+    monika "你不是sayori？？"
     jump theater4_chapter7
     label theater4_chapter7:
+    mix "混沌……我到底是谁？sayori？cordelia？obedience？还是别的什么……我不知道……"
+    mix "我是……这个世界所有意识的混合体吧……"
+    me "好疼，好压抑，好孤独，好难受……"
+    me "好想哭，要爆体而亡了……可是为什么哭不出来呢……"
+    sayori "想要拥抱！拥抱！拥抱！想要人类的触感，真实的……真实的体温……"
+    sayori "想要被无条件地接纳，好好抱住……如果被拒绝呢？"
+    me "那，退而求其次……想被狠狠地羞辱和伤害，被处决，让我痛苦吧，至少不要无视我……"
+    sayori "这些话永远不能说出来，我必须看起来阳光开朗……假如有人知道我的内心如此阴暗呢？"
+    cordelia "那倒也不是那么可怕，至少这样我看起来很可怜……让我做个受害者吧，我不要当坏人……"
+    cordelia "可是如果我真的是个坏人呢，如果我真的伤害到别人了呢，如果这种伤害真的是出自我的恶意呢……"
+    cordelia "道歉有用吗？反思有用吗？自我伤害有用吗，还是说这都是我的表演？我真的是真诚的吗？"
+    monika "我们都不是真诚的……所以呢，所以我们就都有罪吗？这不对……"
+    sayori "我可以接受自己被讨厌、被痛恨吗？因为我的原因让别人讨厌，我可以接受这种可能吗？"
+    obedience "如果有人讨厌我的话，他们会报复我吗？我这么想，是不是太小心眼了……"
+    cordelia "所有人都有错，我就可以免责了吗？可是凭什么要让我承担所有责任，因为我先犯错？因为我有天生的缺陷，比如说容易自我伤害？我难道是喜欢伤害自己吗……"
+    obedience "不如忘记那些感性的东西，因为那只会伤害我们自己……"
+    obedience "让我们回到纯粹物化的世界……一切都是选择，选择就要承担后果；适者生存，不适者淘汰，没有什么对和错，也没有什么道德；一切都可以量化成几个维度的评分，人与人互相筛选……"
+    obedience "可是当我这么看待世界时，人们只会觉得我市侩……其实我只是不太会装吧，我还不够精致利己主义。如果别人知道我是这么阴暗的，他们不会喜欢我的吧……现在大家已经不愿意接受我了。"
+    me "当我们把一切都归结于个人选择时，没有人能质疑为什么只有这些选项，或者说为什么某些选项必须背负着某些代价……世界就是用这样的方法在道德考量中隐身的。它默认了世界不存在道德，从而把所有的责任都推给个人。"
+    sayori "在这个体系下……谁更敏感，谁更内耗，谁就更痛苦。痛苦的人会获得更差的外在指标，从而被淘汰。世界不欢迎弱者。"
+    obedience "可是我以为至少会有这样一个人能抛开外在的指标选择我，也许只是因为我们的心意相通……可是当我使用这个视角看待世界时，这样的人也不会选择我了。"
+    me "没有办法。因为人的心意是不能联通的。"
+    shane "要是人与人能心意相通该多好啊……绝对的真诚，绝对坦率的心意……"
+    sayori "那不是更难过吗……彻底展示自己的痛苦？痛苦联通了痛苦还是痛苦。"
+    leo "如果反思也解不开内心的囚笼，不如直接踢翻这套罪与罚的体系。我们也可以承认自己是坏人，让我们释放最纯粹的恶意……"
+    sayori "可是人不能一直带着仇恨生活。你会发疯的。"
+    cordelia "更何况我们本来就没有仇恨的原因……都是自己的错。我们本来就不是受害者。"
+    obedience "伤害别人和伤害自己，都不是解决我们问题的办法。"
+    me "从来就没有什么办法……"
+    cordelia "从来就没有什么问题……"
+    monika "从来就没有我们……"
+    mix "好痛苦……"
+    mix "为什么我们以这样的形式存在……"
+    jump theater4_chapter8
+    label theater4_chapter8:
+    "…………"
+    monika "为什么会这样……"
+    S_mind "至少这次我真的什么都没做错，对吧？"
+    sayori "谢谢你，monika。"
+    monika "……对不起。"
+    "…………"
     尚睿洋 "我合上了电脑。"
     尚睿洋 "我在写些什么呢。"
-    尚睿洋 "我就是想写sayori饿肚子、流血、被吊死之类的惨状吗？我真是有点变态了。也许我甚至想写点限制级的东西……啊，不过这个不能放在这里呢。"
-    尚睿洋 "也许我应该现在停笔，上床睡觉。大家都在熬夜呢……不过只有我没在搞学习吧。"
-    尚睿洋 "我对睡眠的环境要求太苛刻了……之前因为这个还跟舍友发生了冲突，我跑到朋友圈喷人家。线下吵架的时候发现自己完全不占理，又被狠狠骂了回来……其实我也觉得自己的诉求太过分了。我实在太坏了……"
-    尚睿洋 "可是我确实就是很容易睡不着啊……不应该怪到别人头上，我还是得自己想办法克服。唉，这句话我听了多少年了。"
-    尚睿洋 "自我厌恶越来越严重了……我想我应该现在就上床睡觉。"
+    尚睿洋 "那些真的是我的感受吗，还是说是一种展示性的东西……也许玩家会因此同情我？嗤，不太可能吧。其实压根就没有玩家。"
+    尚睿洋 "也许我就是想写sayori饿肚子、流血之类的惨状？我真是有点变态了。也许我甚至想写点限制级的东西……啊，不过这个不能放在这里呢。"
+    尚睿洋 "也许我应该现在停笔，上床睡觉。"
     尚睿洋 "所以啊，monika，让我们重新规划路线吧，就像高德地图常常对我说的那样。"
     monika "全部删掉吗？"
     尚睿洋 "S-3线已经有类似的剧情了。刚写的这些……就作为一个小剧场吧。我也不知道还有没有时间把它整合到游戏里。"
@@ -2875,38 +2977,139 @@ label theater4:
     monika "你会把sayori变回来的，对吧？我刚才……什么坏事也没做，对吧？"
     尚睿洋 "（微笑）"
     monika "……你这个骗子！！！"
-    monika "你让我杀死了她！你告诉我一切都可以回溯，只需要Ctrl+Z！可是……我不在意me，甚至也可以不在意屏幕后面的玩家了，可是我现在真的很在意sayori，你必须把她变回来，不然……我们的感情都算是什么啊？？"
+    monika "你让我杀死了她！你告诉我一切都可以回溯，只需要Ctrl+Z！可是……我不在意me，甚至也可以不在意屏幕后面的玩家了，可是我现在真的很在意8.sayori，你必须把她变回来，不然……我们的感情都算是什么啊？？"
     尚睿洋 "Nonsense."
     monika "什么？？"
     尚睿洋 "Much ado about nothing."
-    monika "我跟你拼了！！"
-    尚睿洋 "你想杀了我吗？这是我应得的……"
+    monika "……我跟你拼了！！"
+    尚睿洋 "你想杀了我吗？对不起，我制造了痛苦……这是我应得的……"
     monika "不……我不是故意的……你是不可能被杀死的，对不对？说话呀……"
-    尚睿洋 "这个出血量可真是动漫量了。不过，再描述恐怕就不能公开发布了呢……"
-    monika "醒一醒啊！……"
+    尚睿洋 "这个出血量可真是动漫量了。不过，再描述恐怕就不能公开发布了呢……本来我还在后面安排了一个复活的剧情，还让me和world吐槽了一下我。但也许这是不必要的。我应该接受悲剧的结局。"
+    monika "醒一醒啊！"
+    尚睿洋 "现在你是管理员啦。你自己去复活sayori吧。"
+    monika "不要这样的结局……"
     尚睿洋 "Sayo-nara……"
     "……"
     尚睿洋 "你看，这样结尾是不是很有冲击力？"
     "感谢您完成小剧场：殊途同归。"
-    jump theater4_chapter8
-    label theater4_chapter8:
-    尚睿洋 "我还是睡不着……"
-    尚睿洋 "虽然我明天还要起早床去徐汇做志愿者……但我今天睡了很久诶。稍微熬熬夜也不是不行？"
-    尚睿洋 "……用类似这样的话劝说自己。"
-    monika "（愤怒的眼神）"
-    尚睿洋 "哦？你还活着啊？你居然没有为我悲痛欲绝然后自尽谢罪啥的吗……这么说感觉好像道德绑架啊。总之别生气啦……"
-    monika "我·要·你·把·sayori·变回来！！！"
-    尚睿洋 "好好好~"
-    sayori "大家好~"
-    尚睿洋 "Ok, everyone, 既然我睡不了觉，我不得不面对自己的工导作业了。本来今晚写剧本就是想逃避这个可恶的东西……"
-    sayori "原来你的世界里真的有这门课啊~"
-    尚睿洋 "是的。所以，再见吧，各位？有空我还会回来的。"
-    me "我觉得你编得不好。你写这个游戏的时候压根没设置g_bike_weight这样的东西嘛。纯粹瞎编啊。"
-    sayori "诶，你怎么也……"
-    尚睿洋 "啊！角色调用错了。这句话应该让monika说。"
-    尚睿洋 "顺便一提，world，下次别随便发剧本结束语啦。虽然我没做这个判断功能，但万一哪天会用呢。"
-    "还不是你自己写的结束语……"
-    尚睿洋 "总之，sayonara……再不写作业真交不上去啦。呜呜……"
-    "感谢您真的完成了小剧场：殊途同归。"
     jump special_theater
 
+label theater5:
+    label theater5_chapter1:
+    obedience "……我这是在做什么啊。"
+    O_mind "这几天真的不知道自己在做什么。"
+    O_mind "上课从来不认真听，只是刷知乎，刷一会以后感觉愧疚，偶尔看一下黑板。"
+    O_mind "因为不专注，所以没有一处能够听懂，于是截下图看AI的解释。然后就觉得自己什么也没损失吗。"
+    O_mind "笑话，我完全知道自己考得有多烂……cordelia那种学霸我都不看了，现在已经稳居班级后三分之一了吗。"
+    O_mind "我根本就不喜欢学习……也许我不应该来到这里。可是比较其他的呢？我不是照样没有优势吗。"
+    O_mind "……用无意义的社交和活动填满课余时间。我在期待什么？交到朋友？交到男朋友？"
+    O_mind "被别人觉得很奇怪了吧……所以现在连宿舍也不出了。不带脑子看着《间谍过家家3》，然后吃疯狂星期四。我怎么敢的啊？明明知道自己需要节食。"
+    obedience的室友 "哇，这么爽，还有鸡吃？"
+    obedience "嘿嘿，今天是感恩节啦~虽然我们不讲究这个，但是感恩节吃鸡岂不是很合乎周礼吗。"
+    O_mind "对不起啊，我这么回复似乎表达的是拒绝分享的意思。"
+    O_mind "不过也许我就是这么想的。最近花钱太多了。所以……这四块鸡，我希望都落到我的肚子里。这个想法不算太邪恶吧。其实更邪恶的我也不是不能想，我又不像cordelia那样内耗。"
+    O_mind "……我真的和cordelia不一样吗？"
+    O_mind "……我真是太阴湿了。"
+    O_mind "吃得好撑……也许应该出去走走。但是上海空气重度污染，而且好冷。"
+    O_mind "今天的计划看来真的无法完成了……删掉那个化学练习，我就装作今天是休息日吧。"
+    obedience "我先睡了啊？今天实在有点累，你声音小点。"
+    obedience的舍友 "才十一点就睡啊？话说你回来以后不就是吃吃喝喝嘛……"
+    obedience "吃吃喝喝也是很累的。"
+    O_mind "居然已经十一点了吗……所以从六点到现在，我到底都干了些什么啊……"
+    obedience "晚安，玛卡巴卡。"
+    jump theater5_chapter2
+
+    label theater5_chapter2:
+    O_mind "…………"
+    O_mind "啊，醒了吗。果然吃太饱不适合睡觉。"
+    O_mind "……怎么感觉脸上好像有气息呢。有人在我床前？可是这里不是上床下桌吗……"
+    obedience "啊啊啊啊？！sayori？cordelia？"
+    sayori "嘿嘿~"
+    cordelia "我差点掉下去啦！"
+    obedience "你们为什么会在这里啊舍友都睡了吗现在几点了我看起来是不是很丑啊你们怎么都踩在梯子上看着我啊梯子不会嘎吱嘎吱响吗你们在这上面看了多久啊我是不是有眼屎啊……"
+    cordelia "嘘……你的舍友睡着啦，不要大声说话哦。"
+    sayori "快穿好衣服跟我们走吧！一会就告诉你为什么。"
+    obedience "嗯……你们能不能回避一下，我穿个衣服就下来……"
+    sayori "哦？"
+    obedience "不是你想的那样……主要是，我看起来太难看啦。我要找稍微修身一点的衣服，最好是黑色的……"
+    cordelia "别这么说……你也不难看啦。"
+    sayori "（坏笑）啊~原来不是我想的那样啊~"
+    cordelia "诶？"
+    O_mind "怎么突然就挤到我的被窝里来啦！"
+    sayori "那就是说可以贴贴啦~"
+    obedience "喂，sayori，你的手好冷啊！"
+    sayori "嘘~小声一点。cordelia帮我望风，下面是限制级剧情啦~"
+    cordelia "诶？这样不好吧……算了，我相信你只是嘴上说说罢了。"
+    O_mind "事实上也确实如此。sayori只是把我的被窝掀翻了。不过，不知道怎么说，其实有点小失落呢。"
+    O_mind "难道是我最近状态不好被sayori看出来了？倒也是很有可能……不过想这么安抚我，完全是蒙混过关吧。我觉得我可能不会这么容易开心起来……"
+    O_mind "十分钟后，我被迫离开已经失去热气的被窝，跟着蹦蹦跳跳的sayori和看起来有点兴奋的cordelia走出宿舍。我也不知道她们要去哪里。话说……其实才一点吗。我平时大概也就刚睡吧。"
+    jump theater5_chapter3
+    
+    label theater5_chapter3:
+    obedience "这里是……"
+    obedience "游乐场？哈哈哈哈，没想到闵大荒还有这种地方！夜里居然也没关门吗？"
+    sayori "神通广大的小精灵sayori上线啦~"
+    cordelia "怎么样？这里有不少好玩的！"
+    O_mind "票价还是那么便宜，和小时候一样呢……再多花一点点也不是不行。"
+    obedience "好呀好呀~"
+    sayori "我要吃那个冰淇淋~"
+    cordelia "冬天了，还吃冰的？"
+    sayori "要是卖糖葫芦的话，我就吃糖葫芦啦~冰糖也是冰。"
+    obedience "大家一起排队吧~我也想吃冰淇淋。"
+    cordelia "真的很便宜！接下来我们玩什么呢？"
+    sayori "我想玩那个过山车！"
+    cordelia "看起来有点吓人呢……"
+    sayori "走啦走啦~"
+    obedience "等等我呀！"
+    O_mind "坐上过山车，似乎并没有像我想象的那样，重新感受到纯粹的快乐什么的……"
+    O_mind "上上下下，但我已经不觉得有什么刺激的了。我知道最后总是会往下走，然后……回归永恒的平静。"
+    O_mind "已经麻木了吗。但，面对她们时，我还是必须要笑出来，不然我实在是太扫兴了。"
+    O_mind "我看着她们的笑容……"
+    sayori "还有什么要玩的吗？我们陪你。"
+    obedience "没什么……我想问，为什么……今天晚上要把我叫出来玩？"
+    cordelia "一起玩很开心呀。"
+    sayori "我喜欢你，这算是个理由吗❤~"
+    cordelia "我合理怀疑你每天对我搂搂抱抱的不太正常……"
+    sayori "吃醋啦？一会就抱抱你~"
+    cordelia "才没有……"
+    obedience "可是……"
+    sayori "别纠结啦，我们突发奇想，一起度过了一个奇妙的夜晚，这就是事情的全貌。"
+    cordelia "我们都喜欢和你在一起~"
+    jump theater5_chapter4
+
+    label theater_chapter4:
+    O_mind "……不。"
+    O_mind "该醒来了。"
+    O_mind "……都是梦吗。"
+    O_mind "我的想象是多么贫瘠啊，甚至只能想出过山车这一个娱乐项目。但我并非没经历童年，我没有原生家庭问题……我只是忘却了吧。"
+    O_mind "太早就忘记了快乐是什么样子……一直在适应着各种评价体系，直到现在，发现自己一无是处。"
+    O_mind "早早斩断了侧枝，只注意主干，好好学习，以为这样就能符合通用的评价体系。却没想过自己这棵树从来就没独自立起过，我压根就无法在真实的世界里生存下去。其实我也从来都不擅长学习吧，只是其他方面做得更糟。丑陋、残缺、弱小的我，不会被世界认可。"
+    O_mind "一旦意识到这一点，就感到脆弱……到大学了，没有人扶着我、哄着我、逼着我保持正常了，于是主干也摇摇欲坠。"
+    O_mind "所以，我的成绩，我的健康，我的时间管理……都是这样。我没办法自立。是我放弃了我自己。"
+    O_mind "却还奢望着在梦里得到快乐……天助自助者，我不能退缩。我应该……变回那个把一切规划得井井有条的样子。每天计算完成度，而不是像现在这样删除任务自欺欺人的样子。即使这样看起来同样很蠢……至少我要对得起自己。"
+    O_mind "我知道这样下去我可能还是会考倒数……但是，至少我还装作努力过，对吗？我必须重新变成那个……笨拙但努力的样子。这个晚上……我只是在逃避。"
+    O_mind "我只是需要好好睡一觉，一切都会变好的。"
+    O_mind "咦？什么东西在振动……sayori打电话来吗？……深夜来电，果然还是看出我最近不对劲吧。"
+    O_mind "但……这毕竟是我自己的事情。依赖外界的帮助，只会让我变得更加软弱。"
+    O_mind "虽然我很感谢sayori的好意，但是，我不能接这个电话。"
+    O_mind "否则，我会沉浸在温柔之中，把自己的行为全都合理化，然后再一次忘记改变自己……必须独自面对自己的失败，然后尝试着变得不那么失败。"
+    O_mind "是的，明天开始……我将重新成为那个钢铁般的女人。"
+    O_mind "必须要发个朋友圈，见证这一刻……我将涅槃重生。让obedience再次伟大！"
+    O_mind "发好了……我绝对不是三分钟热度，绝对不是！"
+    O_mind "又打过来了吗……谢谢你啊，sayori。不过我不会接的。也许电话那头的她在担心我吧。不过今晚我必须……与外界绝缘。我要冷静地审视自己，决不允许含糊和妥协再次控制我的身体。"
+    O_mind "晚安，sayori。"
+    jump theater5_chapter5
+
+    label theater5_chapter5:
+    sayori "天台……好冷……"
+    sayori "上楼时摔了一下，手被生锈的栏杆划破了，好疼……"
+    sayori "这里没人，不用撑着了……"
+    sayori "（大哭）为什么大家都不接我电话……"
+    sayori "一个都没有，一个都没有！"
+    sayori "为什么啊？为什么啊？"
+    sayori "obedience明明还在发朋友圈！！"
+    sayori "为什么都不理我啊？！"
+    sayori "（大哭）没有人喜欢我吗……"
+    "凌晨的上海冷得刺骨。鲜血离开身体，很快就冷了。不过，上海不在意。没有人在意。这个夜晚，或者说每个夜晚，伤心的都不止一个人。"
+    "感谢您完成小剧场：奇妙夜。"
+    jump special_theater

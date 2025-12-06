@@ -134,21 +134,33 @@
 3,option,obedience->8
 3,end,end
 
+6,image,s_happy
 6,sayori,走吧走吧。哇,你看路上还有松果！好多好多！
 6,me,那个不砸开就不能吃的。
+6,hide,s_happy
+6,image,s_normal
 6,sayori,诶,这样啊……不过松鼠也很可爱！
+6,hide,s_normal
+6,image,s_understanding
 6,mind,sayori说了些啥？其实我没太认真听……
 6,sayori,……抱一下。
 6,me,嗯？什么……
+6,hide,s_understanding
+6,image,s_hug
 6,mind,我还没反应过来呢,sayori突然抱了抱我。
 6,achievement,拥抱1
 6,sayori,你最近一定遇到了不开心的事情吧。不想说也可以不说,我会陪着你的。
 6,me,sayori……
 6,stranger,不好意思,让一下让一下！
+6,image,m_bike at left
 6,me,哇！
 6,stranger,没事吧？不好意思,自行车刹车坏掉了……我叫monika。
+6,hide,s_hug
+6,image,s_happy
 6,sayori,呆~jio~不~（转向我）那么,拜拜！下午见啦！
 6,me,拜拜……
+6,hide,s_happy
+6,hide,m_bike
 6,mind,我们向三个方向走去。
 6,mind,清醒一下,这不是表白,sayori总是会拥抱不开心的人……
 6,mind,不过,我表现得这么明显吗？
@@ -538,7 +550,7 @@
 31,me,可是,我该怎么寻找自己的真实情感呢？
 31,monika,你要进入心流状态……想象一下,如果你处在一片虚无之中,你会感受到什么？然后往这片虚无里加入你在意的东西,一个又一个……观察你会有什么感受。然后,把这种感觉记录下来,这就是诗。
 31,me,哇……很有哲学意味……
-31,moment,大家在活动室里写了半个多小时。monika让大家开始念自己写的诗歌。确实,划水社员写得东西都令人不堪卒读。
+31,mind,大家在活动室里写了半个多小时。monika让大家开始念自己写的诗歌。确实,划水社员写得东西都令人不堪卒读。
 31,monika,leo,我跟你说过了不准用AI写！
 31,me,诶,leo也加入文学社了？
 31,leo,社长大人理解一下~素拓,菜菜,捞捞~

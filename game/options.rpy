@@ -14,9 +14,9 @@
 define config.name = _("Doki_doki_Ohayou_Sayori")
 
 
-## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
+## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。(2025.11.26修改！)
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## 游戏版本号。
@@ -55,7 +55,7 @@ define config.has_voice = True
 
 
 ## 将以下语句取消注释就可以设置标题界面播放的背景音乐文件。此文件将在整个游戏
-## 中持续播放，直至音乐停止或其他文件开始播放。
+## 中持续播放，直至音乐停止或其他文件开始播放。（2025.11.26修改！）
 
 # define config.main_menu_music = "main-menu-theme.ogg"
 

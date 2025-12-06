@@ -1,0 +1,36 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 251, in script
+    show c_happy at leftish
+  File "game/script.rpy", line 251, in <module>
+    show c_happy at leftish
+                    ^^^^^^^
+NameError: name 'leftish' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "game/script.rpy", line 251, in script
+    show c_happy at leftish
+  File "renpy/ast.py", line 1357, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ast.py", line 726, in show_imspec
+    at_list = [renpy.python.py_eval(i) for i in at_list]
+               ~~~~~~~~~~~~~~~~~~~~^^^                  
+  File "renpy/python.py", line 1292, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1285, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/script.rpy", line 251, in <module>
+    show c_happy at leftish
+                    ^^^^^^^
+NameError: name 'leftish' is not defined
+
+Windows-10-10.0.19045-SP0 AMD64
+Ren'Py 8.4.1.25072401
+Doki_doki_Ohayou_Sayori 1.0
+Fri Nov 21 15:25:39 2025
